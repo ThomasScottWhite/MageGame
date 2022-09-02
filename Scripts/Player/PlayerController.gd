@@ -3,13 +3,19 @@ extends AnimatedSprite
 
 # Declare member variables here. Examples:
 var speed = 100
+var health = 50
 # var b = "text"
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	event_bus.connect("player_damage", self, "takedamage")
 
+func takedamage(damage_position,damage_range,amount):
+	if self.position.distance_to(damage_position) <= damage_range:
+		health -= amount
+	if health <= 0:
+		print("dead")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
