@@ -1,11 +1,22 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/Enemies/Zombie.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Player/Wizard Right.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Enemies/Zombie/Zombie Left.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Enemies/Zombie/Zombie Right.png" type="Texture" id=3]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "Right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -13,4 +24,5 @@ animations = [ {
 
 [node name="Zombie" type="AnimatedSprite" groups=["Enemys"]]
 frames = SubResource( 1 )
+animation = "Left"
 script = ExtResource( 1 )

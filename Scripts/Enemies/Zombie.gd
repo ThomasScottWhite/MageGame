@@ -2,12 +2,13 @@ extends AnimatedSprite
 
 
 # Declare member variables here. Examples:
-var health = 50
+var health = 250
 var speed = 50
 onready var player = get_node("../Player")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	#warning-ignore:return_value_discarded
 	event_bus.connect("damage", self, "takedamage")
 
 func takedamage(damage_position,damage_range,amount):
@@ -20,8 +21,10 @@ func takedamage(damage_position,damage_range,amount):
 func _process(delta):
 	if player.position.x >= self.position.x:
 		self.position.x += speed * delta
+		self.play("Right")
 	if player.position.x <= self.position.x:
 		self.position.x -= speed * delta
+		self.play("Left")
 	if player.position.y >= self.position.y:
 		self.position.y += speed * delta
 	if player.position.y <= self.position.y:

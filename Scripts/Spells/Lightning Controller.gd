@@ -16,7 +16,6 @@ func _input(event):
 		var instance = Lightning.instance()
 		add_child(instance)
 		instance.position = event.position/10
-		print("Mouse Click/Unclick at: ", event.position)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass

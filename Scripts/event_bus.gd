@@ -1,6 +1,7 @@
 extends Node
 #warning-ignore:unused_signal
-signal player_damage(damage_position,damage_range,amount)
+signal player_damage(damage_position,damage_range,amount)\
+#warning-ignore:unused_signal
 signal damage(damage_position,damage_range,amount)
 # Declare member variables here. Examples:
 # var a = 2
