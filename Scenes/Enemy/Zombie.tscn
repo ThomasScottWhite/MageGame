@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Scripts/Spells/LightningBolt.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Spells/Lighting.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/Enemies/Zombie.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Player/Wizard Right.png" type="Texture" id=2]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -11,6 +11,6 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="AnimatedSprite" type="AnimatedSprite"]
+[node name="Zombie" type="AnimatedSprite" groups=["Enemys"]]
 frames = SubResource( 1 )
 script = ExtResource( 1 )

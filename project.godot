@@ -14,6 +14,10 @@ config/name="Mage God"
 run/main_scene="res://World.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+event_bus="*res://Scripts/event_bus.gd"
+
 [display]
 
 window/size/width=1920
