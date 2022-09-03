@@ -2,6 +2,20 @@ extends AnimatedSprite
 
 
 # Declare member variables here. Examples:
+#Level Stats
+var level = 1
+var xp = 0
+
+#Spell Stats
+var attackSpeed = 1.0
+var projectileAmount = 1.0
+var attackRangeMultiplier = 1.0
+var fireDamageMultiplier = 1.0
+var waterDamageMultiplier = 1.0
+var lightningDamageMultiplier = 1.0
+var spellDamageMultiplier = 1.0
+
+#Abilitiy States
 var speed = 100
 var health = 50
 # var b = "text"
